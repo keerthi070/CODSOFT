@@ -1,0 +1,13 @@
+n=int(input("enter number 1\n"))
+m=int(input("enter number 2\n"))
+c=str(input('enter character\n'))
+if(c=='+'):
+    print("addition of 2 numbers",n+m)
+elif(c=='-'):
+    print("substraction of two numbers ",n-m)
+elif(c=='*'):
+    print("Multiplication of two numbers",n*m)
+elif(c=='/'):
+    print("Division of two numbers",n/m)
+elif(c=='%'):
+    print("mod of two numbers",n%m)
