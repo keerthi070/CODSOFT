@@ -1,0 +1,26 @@
+import random
+l=["rock","paper","scissor"]
+choice=input("enter rock or paper or scissor: ")
+def user_input():
+    if (choice not in l):
+        raise SyntaxError("Invalid choice please try again")
+    return choice
+def computer_input():
+    com_choice=random.choice(l)
+    return com_choice
+def winner(choice,com_choice):
+    if (choice==com_choice):
+        print("Game was Tie")
+    elif((choice=="rock" and com_choice=="scissor") or (choice=='paper' and com_choice=='rock') or (choice=='scissor' and com_choice=='paper')):
+        print("Winner is User")
+    else:
+        print("Winner is Computer")
+def play_game():
+    choice=user_input()
+    com_choice=computer_input()
+    print("you choice:{}".format(choice))
+    print("computer choice:{}".format(com_choice))
+    winner(choice,com_choice)
+play_game()
+user_input()
+computer_input()
